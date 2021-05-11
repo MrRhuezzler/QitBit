@@ -57,8 +57,5 @@ class Blockchain {
 
         static bool verify_block_chain(const Blockchain& bc);
 
-    // BREEP_ENABLE_SERIALIZATION(Blockchain, chain, pending, difficulty, mining_reward, number_of_transactions_per_block);
 
 };
-
-// BREEP_DECLARE_TYPE(Blockchain);

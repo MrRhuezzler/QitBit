@@ -18,8 +18,6 @@ class q_block;
 
 class Block {
 
-    // time_t _time;
-
     int index;
     std::string time_string;
 
@@ -50,8 +48,4 @@ public:
 
     friend std::ostream& operator<<(std::ostream& out, const Block& blk);
 
-    // BREEP_ENABLE_SERIALIZATION(Block, index, time_string, transactions, transactions_hash_string, prev_hash_string, hash_string, nonce);
-
 };
-
-// BREEP_DECLARE_TYPE(Block);

@@ -87,7 +87,10 @@ void view_blockchain(const Blockchain& bc, int maxY, int maxX){
     std::string blank_string(title_string.size(), '-');
     mvwprintw(viewBlkWin, 2, (maxX) - (blank_string.size() / 2), blank_string.c_str());
 
+
     std::cout << bc << std::endl;
+
+    getch();
 
     int c;
     do {
@@ -250,16 +253,19 @@ int main_menu(Blockchain& bc, int maxY, int maxX, double balance, std::string ni
 
         case 0:
         send_trasaction(bc, maxY, maxX, balance, nick);
+        clear();
         return 1;
         break;
 
         case 1:
         view_blockchain(bc, maxY, maxX);
+        clear();
         return 2;
         break;
 
         case 2:
         mine_block(bc, maxY, maxX, nick);
+        clear();
         return 3;
         break;
 

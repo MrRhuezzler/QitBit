@@ -15,8 +15,6 @@ class q_transaction;
 
 class Transaction {
 
-    // time_t _time;
-
     std::string sender_address;
     std::string receiver_address;
     double amount;
@@ -38,8 +36,5 @@ public:
     std::string to_string() const;
 
     friend std::ostream& operator<<(std::ostream& out, const Transaction &a);
-    // BREEP_ENABLE_SERIALIZATION(Transaction, sender_address, receiver_address, amount, time_string, hash_string);
 
 };
-
-// BREEP_DECLARE_TYPE(Transaction);

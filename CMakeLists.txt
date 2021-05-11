@@ -24,7 +24,4 @@ add_executable(QitbitBC bc.cpp
                src/qitbit.cpp include/qitbit.h
                src/types.cpp include/types.h)
 
-add_executable(TestBC test.cpp)
-
 target_link_libraries(QitbitBC ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${CURSES_LIBRARIES})
-target_link_libraries(TestBC ${CURSES_LIBRARIES})

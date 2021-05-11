@@ -94,7 +94,7 @@ Block* Blockchain::get_last_blk(){ return chain.back(); }
 
 Block* Blockchain::genesis_blk(){
 
-    std::vector<Transaction*> genesis_transaction = {new Transaction("Miner Rewards", "The Creator", mining_reward)};
+    std::vector<Transaction*> genesis_transaction = {new Transaction("Miner Rewards", "bob", mining_reward)};
     Block* genesis = new Block(0, genesis_transaction, time(0), "");
     genesis->mine_block(difficulty);
     return genesis;
