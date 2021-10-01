@@ -13,8 +13,10 @@ COPY . /usr/src/qitbit
 
 WORKDIR /usr/src/qitbit
 
-RUN mkdir build && cd build
+RUN cmake .
 
-RUN cmake ..
+RUN make
 
-CMD [ "build\QitbitBC" ]
+EXPOSE 8000-9000
+
+CMD [ "./QitbitBC" ]
